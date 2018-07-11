@@ -1,0 +1,40 @@
+<template id="country-state-template">
+    <div> This is sample country state template</div>
+</template>
+<script>
+    const template = document.currentScript.ownerDocument.querySelector('template').content;
+    class CountryStateClass extends HTMLElement {
+        constructor() {
+            super();
+            this.country = null;
+            this.state = null
+            this.attachShadow({mode: 'open'});
+            this.shadowRoot = document.importNode(template, true);
+        }
+
+        get country() {
+            return this.country;
+        }
+
+        set country(value) {
+            this.country = value;
+        }
+
+        static get observedAttributes() { return ["country"]; }
+        
+        attributeChangedCallback(name, oldValue, newValue) {
+            if(newValue === oldValue) {
+                return;
+            }
+            this[name] = newValue;
+            this._render();
+        }
+        connectedCallback() {
+            this._render();
+        }
+        
+        _render() {
+            
+        }   
+    }
+</script>

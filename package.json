@@ -1,0 +1,18 @@
+{
+  "name": "web-components-examples",
+  "version": "1.0.0",
+  "description": "This is repository for exmaples of web components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web-components"
+  ],
+  "author": "name <name@amdocs.com> (http://blog.example.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
