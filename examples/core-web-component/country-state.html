@@ -1,40 +1,44 @@
 <template id="country-state-template">
-    <div> This is sample country state template</div>
+    <div id="country">
+    </div>
 </template>
 <script>
     const template = document.currentScript.ownerDocument.querySelector('template').content;
     class CountryStateClass extends HTMLElement {
         constructor() {
             super();
-            this.country = null;
-            this.state = null
-            this.attachShadow({mode: 'open'});
-            this.shadowRoot = document.importNode(template, true);
+            this.attachShadow({ mode: 'open' });
+            this.shadowRoot.appendChild(document.importNode(template, true));
         }
 
         get country() {
-            return this.country;
+            return this.getAttribute('country');
         }
 
         set country(value) {
-            this.country = value;
+            this.setAttribute('country', value)
         }
 
         static get observedAttributes() { return ["country"]; }
-        
+        /**
+         * Interestingly this method is called before connectedCallback method, 
+         * resulting error of not getting shadowRoot. That is why we need to assign
+         * shadowRoot in the constructor and not in connectedCallback
+         */
         attributeChangedCallback(name, oldValue, newValue) {
-            if(newValue === oldValue) {
+            if (newValue === oldValue) {
                 return;
             }
-            this[name] = newValue;
             this._render();
         }
+
         connectedCallback() {
             this._render();
         }
-        
+
         _render() {
-            
-        }   
+            this.shadowRoot.querySelector('#country').textContent = this.country;
+        }
     }
+    customElements.define('country-state', CountryStateClass);
 </script>
