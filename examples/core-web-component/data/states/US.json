@@ -1,0 +1,18 @@
+[
+    {
+        "stateCode": "MI",
+        "stateName": "Michigan"
+    },
+    {
+        "stateCode": "NV",
+        "stateName": "Nevada"
+    },
+    {
+        "stateCode": "TX",
+        "stateName": "Texas"
+    },
+    {
+        "stateCode": "WA",
+        "stateName": "Washington"
+    }
+]

@@ -1,6 +1,5 @@
 <template id="country-state-template">
-    <div id="country">
-    </div>
+    <div id="country"></div>
 </template>
 <script>
     const template = document.currentScript.ownerDocument.querySelector('template').content;
@@ -39,6 +38,16 @@
         _render() {
             this.shadowRoot.querySelector('#country').textContent = this.country;
         }
+
+        fetchCountries() {
+
+        }
+
+        fetchStates(country) {
+
+        }
+
+        
     }
     customElements.define('country-state', CountryStateClass);
 </script>

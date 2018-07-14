@@ -1,0 +1,18 @@
+[
+    {
+        "stateCode": "MH",
+        "stateName": "Maharashtra"
+    },
+    {
+        "stateCode": "GA",
+        "stateName": "Goa"
+    },
+    {
+        "stateCode": "GJ",
+        "stateName": "Gujarath"
+    },
+    {
+        "stateCode": "DL",
+        "stateName": "Delhi"
+    }
+]

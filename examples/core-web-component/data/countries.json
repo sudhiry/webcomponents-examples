@@ -1,0 +1,18 @@
+[
+    {
+        "countryCode": "IN",
+        "countryName": "India"
+    },
+    {
+        "countryCode": "US",
+        "countryName": "United States"
+    },
+    {
+        "countryCode": "GER",
+        "countryName": "Germany"
+    },
+    {
+        "countryCode": "CN",
+        "countryName": "Canada"
+    }
+]
