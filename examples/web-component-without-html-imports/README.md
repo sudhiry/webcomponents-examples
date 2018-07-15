@@ -1,5 +1,4 @@
 ## Web components without using HTML imports standards
-**...In progress**
 
 Not all browsers supports all proposed web component standards. Mostly "HTML imports" are not being supported by Edge, Safari, Mozilla. If you run [Core web Components](../core-web-Components) on above browsers it will fail!. So we have to find a way to run the web components on all (commonly used!) browsers.
 
