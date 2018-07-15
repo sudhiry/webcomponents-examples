@@ -1,0 +1,18 @@
+[
+    {
+        "stateCode": "ON",
+        "stateName": "Ontario"
+    },
+    {
+        "stateCode": "QC",
+        "stateName": "Quebec"
+    },
+    {
+        "stateCode": "NA",
+        "stateName": "Nova Scotia"
+    },
+    {
+        "stateCode": "MB",
+        "stateName": "Manitoba"
+    }
+]

@@ -98,6 +98,7 @@
 
         _updateStates() {
             if (this.states[this.country]) {
+                this._addStateOptions();
                 this._render();
             } else {
                 if (!this.statesRequestInProgress) {

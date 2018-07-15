@@ -1,0 +1,18 @@
+[
+    {
+        "stateCode": "BY",
+        "stateName": "Bavaria"
+    },
+    {
+        "stateCode": "BE",
+        "stateName": "Berlin"
+    },
+    {
+        "stateCode": "BW",
+        "stateName": "Baden-Württemberg"
+    },
+    {
+        "stateCode": "HH",
+        "stateName": "Hamburg"
+    }
+]
