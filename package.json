@@ -5,6 +5,7 @@
   "main": "",
   "scripts": {
     "start": "browser-sync start -s examples -w",
+    "babel": "babel ./examples/react-web-component/src --out-dir ./examples/react-web-component/lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,6 +16,15 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.24.5"
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "browser-sync": "^2.24.5",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   }
 }
