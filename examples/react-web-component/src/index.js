@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
 import SampleComponent from './SampleComponent';
 
@@ -6,11 +7,10 @@ if (!'content' in document.createElement('template')) {
 }
 
 
-class CountryStateClass extends HTMLElement {
+export default class CountryStateClass extends HTMLElement {
     constructor() {
         super();
         const ele = document.createElement('div');
-        ele.setAttribute("id", "#container");
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(document.importNode(ele, true));
     }
@@ -41,8 +41,11 @@ class CountryStateClass extends HTMLElement {
     }
 
     _render() {
-        ReactDOM.render(SampleComponent, this.shadowRoot.querySelector('#container'));
+        if(this.shadowRoot && this.shadowRoot.querySelector('div')) {
+            ReactDOM.render(<SampleComponent />, this.shadowRoot.querySelector('div'));
+        }
     }
 
 }
 customElements.define('sample-component', CountryStateClass);
+
