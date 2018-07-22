@@ -7,5 +7,6 @@ All commonly used browsers use following web component standards:
 - [Custom Elements](https://w3c.github.io/webcomponents/spec/custom/): The Custom Elements specification lays the foundation for designing and using new types of DOM elements.
 - [Shadow DOM](https://w3c.github.io/webcomponents/spec/shadow/): The shadow DOM specification defines how to use encapsulated style and markup in web components.
 
-### Issues:
-- I tried to create [HTML Template](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element/) using `document.createElement('template')` appending HTML in it. After importing into the `shadowRoot`, query selector was not able to find the elements inside `template`. Example: `this.shadowRoot.querySelector('#country')` returns `null`
+### Notes:
+- I see `attributeChangedCallback` is called before, if the usage has passed attributes to the custom components, and `connectedCallback` is called later.
+- If you are listening to both the calls `attributeChangedCallback` and `connectedCallback`, you won't get `this.shadowRoot.querySelector('#<ele>')` at first time as it is happening through `attributeChangedCallback` and the component is not rendered yet in the DOM.
