@@ -6,7 +6,6 @@ if (!'content' in document.createElement('template')) {
     throw new Error('Your browser does not support template elements, please upgrade!');
 }
 
-
 export default class CountryStateClass extends HTMLElement {
     constructor() {
         super();
@@ -24,20 +23,12 @@ export default class CountryStateClass extends HTMLElement {
         this._update();
     }
 
-    /**
-     * Event Listeners can only be added in connectedCallback because DOM is 
-     * rendered before connectedCallback method
-     */
     connectedCallback() {
         this._render();
     }
 
-    /**
-     * We should not fetch any data here because this method will be called multiple times.
-     * So workaround I added is to check if request in progress or not.
-     */
     _update() {
-       
+       this._render();
     }
 
     _render() {
@@ -47,5 +38,6 @@ export default class CountryStateClass extends HTMLElement {
     }
 
 }
+
 customElements.define('sample-component', CountryStateClass);
 
