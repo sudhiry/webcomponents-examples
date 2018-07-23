@@ -13,5 +13,5 @@ HTML import standard is still not supported by all browsers, so our web componen
 ## [Web Components using React](examples/react-web-component)
 Almost all of development works on top of some frameworks like React, Angular, Vue. So it is necessary to have web components in related frameworks. This example illustrate the use of React in web components. Support for web component transpilation is currently not a standard and pritty much basic. Babel supports
 
-## [Web components using Polymer](examples/polymer-web-components)
+## [Web components using Polymer](examples/polymer-web-component)
 [Polymer 3.0](https://www.polymer-project.org/3.0/docs/about_30) has come up with a framework for hassel free creation of web components. 
