@@ -1,3 +1,5 @@
+import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter';
+import '@webcomponents/webcomponentsjs/webcomponents-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SampleComponent from './SampleComponent';
